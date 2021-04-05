@@ -11,11 +11,24 @@ class Perceptual extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => Home(),
-        '/login': (context) => Login(),
+        '/login': (context) => Home(),
+        '/': (context) => Builder(builder: (context){
+          ResponsiveApp.setMq(context);
+          return Login();
+        }),
         '/register': (context) => Register()
       },
       debugShowCheckedModeBanner: false,
     );
+  }
+}
+
+class ResponsiveApp {
+  static MediaQueryData _mediaQueryData;
+
+  MediaQueryData get mq => _mediaQueryData;
+
+  static void setMq(BuildContext context) {
+    _mediaQueryData = MediaQuery.of(context);
   }
 }

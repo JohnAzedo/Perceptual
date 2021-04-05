@@ -1,3 +1,4 @@
+import 'package:client/main.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -8,6 +9,14 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    return Text('Login page');
+    if(ResponsiveApp().mq.size.width < 800){
+      return Scaffold(
+        body: Text('Phone'),
+      );
+    }else{
+      return Scaffold(
+        body: Text('Web'),
+      );
+    }
   }
 }
