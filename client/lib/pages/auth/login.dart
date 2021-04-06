@@ -13,19 +13,21 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     double screenWidth = ResponsiveApp().mq.size.width;
     return Scaffold(
-      appBar: AppBar(title: Text('Perceptual 1213'),),
+      appBar: AppBar(
+        title: Text(klTitle),
+      ),
       body: Center(
         child: Card(
           child: Padding(
-            padding: const EdgeInsets.all(Dimensions.padding),
+            padding: const EdgeInsets.all(kdPadding),
             child: Column(
               children: [
                 Text('Login'),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: ()=>{},
-                    child: Text(Strings.signIn),
+                    onPressed: () => {},
+                    child: Text(klSignIn),
                   ),
                 )
               ],

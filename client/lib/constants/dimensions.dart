@@ -1,3 +1,1 @@
-class Dimensions{
-  static const double padding = 24.0;
-}
+const double kdPadding = 24.0;
